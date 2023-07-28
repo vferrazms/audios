@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Áudio</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+      
+    body {
+      height: 100vh;
+      overflow: hidden;
+      margin: 0px;
+
+    }    
+
+<!-- Script de data !-->
+      <label><h1>El último día para verte es <b><span id="data"></span></b></h1></label>
+      <script>
+        let data = document.getElementById('data');
+        var text = document.createTextNode(RetornaDataHoraAtual());        
+        data.appendChild(text);
+
+        function RetornaDataHoraAtual(){
+          var dNow = new Date();
+          var localdate = dNow.getDate() + '/' + (dNow.getMonth()+1) + '/' + dNow.getFullYear();
+          return localdate;
+        }
+      </script>
+      <!-- Script de data !-->        
+    
+</head>
+<body>
+  
+</body>
+</html>
